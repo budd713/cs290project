@@ -1,0 +1,25 @@
+<br>
+<h1>Contact</h1>
+
+<form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" id="contact-form" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="name" required="required" class="form-control" id="contactInputName" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email address</label>
+            <input type="email" required="required" class="form-control" id="contactInputEmail"
+                placeholder="name@example.com">
+        </div>
+        {{!-- This is a scroll box --}}
+        <div class="mb-3">
+            <label for="inputMessage" class="form-label">Message</label>
+            <textarea class="form-control" required="required" id="contactInputMessage" rows="3"></textarea>
+        </div>
+        <button type="submit" value="submit" id="contactSubmit" class="btn btn-primary">Submit</button>
+    </fieldset>
+</form>
+
+<script src="/js/contactform.js">
+</script>

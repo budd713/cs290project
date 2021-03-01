@@ -1,0 +1,38 @@
+<br>
+<h1>Stock Lookup</h1>
+<br>
+<div>
+    <form class="d-flex" action="/stocklookup.html" method="POST">
+        <input class="form-control me-2" type="Lookup" placeholder="Enter stock symbol here" name="stock_ticker" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+
+
+    {{!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form> --}}
+
+</div>
+<br>
+<div class="jumbotron">
+    <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+    <br>
+    <p class="lead">
+        <strong>Latest Price: $</strong>{{ stock.latestPrice }}<br>
+        <strong>Previous Close: $</strong>{{ stock.previousClose }}<br>
+        <strong>Percent Change: </strong>{{ stock.changePercent }}<br>
+        <strong>Market Capitalization: $</strong>{{ stock.marketCap }}<br>
+        <strong>YTD Change (percent): </strong>{{ stock.ytdChange }}<br>
+        <strong>52 Week High: </strong>{{ stock.week52High }}<br>
+        <strong>52 Week Low: </strong>{{ stock.week52Low }}<br>
+    </p>
+</div>
+<br>
+<br>
+
+
+
+{{!-- {{#each stock}}
+{{@key}} | {{this}}</br>
+{{/each}} --}}
